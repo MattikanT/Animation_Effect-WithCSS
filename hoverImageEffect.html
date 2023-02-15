@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover Overlay Slide from bottom to top</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Damion&family=Open+Sans:wght@500&family=Oswald:wght@300&family=Roboto+Condensed&family=Roboto:wght@100&family=Sofia+Sans+Extra+Condensed&family=Sofia+Sans:wght@1;100;200;400&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .main_container{
+            margin: 6% auto;
+            position: relative;
+            width: 25%;
+            border: 1px solid #000;
+        }
+        img{
+            display: block;
+            width: 100%; /*at first image was out of the box container but width 100% make it fit the box side*/
+            height: auto;
+        }
+        .overlay{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.75);
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+
+        }
+        .main_container:hover .overlay{
+            height: 100%;
+        }
+        h1{
+            width: 100%;
+            margin-top: 10%;
+            color: #fff;
+            font-size: 4vh;
+            position: absolute;
+            text-align: center;
+            font-family: 'Damion',cursive;
+            transform: rotate(-5deg)skewX(-5deg);
+        }
+        p{
+            text-align: center;
+            font-family: 'Roboto',sans-serif;
+            color: white;
+            font-size: 1.2vw;
+            margin: 30% 0 0 18%;
+            width: 70%;
+            letter-spacing: 2px;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <img src="../biuld a page/images/mySelf.png" alt="">
+        <div class="overlay">
+            <h1>Sample Text</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed culpa similique repellendus obcaecati aliquid nostrum, corporis rerum? Libero, possimus quibusdam voluptatem pariatur et recusandae impedit vero quidem! Fuga, vitae vero.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
